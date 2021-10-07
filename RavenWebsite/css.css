@@ -50,7 +50,7 @@ body {
                        
   }
 
-
+/*
   #page::after {
     content: "Welcome to Raven Digital";
     color: rgb(228, 228, 228);
@@ -74,13 +74,13 @@ body {
     background-color: rgb(28, 28, 28);
     animation: slideOut ease-in 1200ms 3s forwards;
   
-    /* filter: grayscale(100%); */
+    
     z-index: 1;   
  
   }
   @keyframes slideOut {
     0% {
-      /* transform: translateX(0%); */
+      
       opacity: 1;
       
     }
@@ -101,15 +101,19 @@ body {
       transform: translateY(100%);
       opacity: 0.9;
       color: rgb(40, 40, 40);
-      /* background-size:0; */
+      
       font-size: 0px;
     }
     
   }
     
-
+*/
 
 a {
+  text-decoration: none;
+    color: white;
+}
+nav a {
     text-decoration: none;
     color: white;
     /* font-weight: 100; */
@@ -119,10 +123,10 @@ a {
     position: relative;
     transition: color 300ms ease-in;
 }
-a:last-of-type {
+nav a:last-of-type {
   margin-right: 0;
 }
-a::after {
+nav a::after {
   content: "";
   border-top: 1px solid white;
   height: 1px;
@@ -150,12 +154,12 @@ a::after {
       margin-right: 7em;
       
   }
-   a:hover {
+  nav a:hover {
       /* color:rgb(240, 208, 79) */
       color: rgb(223, 116, 116);
   }
    
-  a:hover::after {
+ nav a:hover::after {
     transform: translateX(220%);
   }
   
@@ -248,7 +252,7 @@ margin-right: 10px;
       margin-top: -1em;
     
   }
-  h2 {
+  main h2 {
     padding-top: 0.3em;
     color: white;
     font-size: 1.75em;
@@ -527,6 +531,7 @@ margin-top: 0px;
     margin-top: 7em;
     margin-bottom: 6em;
     /* position: relative; */
+    scroll-margin-top: 5em;
 }
 
 .gal {
@@ -584,7 +589,7 @@ height: 100%;
 }
 
 .gal-img p {
-  color: white;
+  color: rgb(235, 235, 235);
   position: absolute;
   justify-content: center;
   opacity: 0;
@@ -597,9 +602,74 @@ height: 100%;
   opacity: 1;
 }
 
+/* contact section */
+
+.contact {
+  height: 650px;
+  background-color: rgb(52, 52, 52, 1);
+  background-image: url(contactBg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  filter: opacity(95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(36, 36, 36, 0.6);
+  border-radius: 5%;
+border: 1px solid rgba(92, 92, 92, 0.5);
+
+
+}
+
+.contact-container h2 {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-top: 1.5em;
+}
+
+.input-box {
+  
+  width: 75%;
+  height: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 30px;
+  justify-content: center;
+  
+
+}
+#comments {
+  width: 100%;
+  grid-column: span 2;
+  margin-left: 0;
+}
+.input-box button {
+  margin: auto;
+  /* margin-right: 0; */
+  grid-column: span 2;
+  
+}
+input, select {
+  margin: auto;
+  height: 40px;
+  font-size: 1em;
+  width: 100%;
+}
 /* footer */
 footer {
-    height: 200px;
+    height: 150px;
     background-color: rgb(40, 40, 40);
     /* position: relative; */
     display: flex;
@@ -612,7 +682,7 @@ footer p {
     color: white;
     font-weight: 100;
     letter-spacing: 1px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     
     
 }
@@ -620,7 +690,8 @@ footer p {
 footer div {
     text-align: center;
     /* position: absolute; */
-   margin-bottom: 5px;
-   
+   margin-bottom: 10px;
+   display: flex;
+   justify-content: space-around;
 }
 
