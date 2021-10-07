@@ -666,6 +666,7 @@ input, select {
   height: 40px;
   font-size: 1em;
   width: 100%;
+  padding-left: 5px;
 }
 /* footer */
 footer {
