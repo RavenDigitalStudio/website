@@ -36,7 +36,7 @@ $(".nav a").on("click", function (e) {
   // 2
   const href = $(this).attr("href");
   // 3
-  $("html, body").animate({ scrollTop: $(href).offset().top }, 1500);
+  $("html, body").animate({ scrollTop: $(href).offset().top }, 1000);
 });
 
 
