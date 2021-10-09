@@ -5,7 +5,7 @@ const faders = document.querySelectorAll(".fade-in");
 //$("#in").hide();
 const options = {
     //rootMargin: "-150px",
-    threshold: 0.7
+    threshold: 0.5
 }
 
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
@@ -39,5 +39,24 @@ faders.forEach(fader => {
 //   $("html, body").animate({ scrollTop: $(href).offset().top }, 1000);
 // });
 
+// Dark / Light Mode 
+const input = document.querySelectorAll('.tgl input');
+const page = document.querySelectorAll('#page');
+
+input.forEach(e => {
+    
+    e.addEventListener('change', updateValue);
+})
+
+function updateValue(e) {
+    if(page[0].classList.contains("dark")) {
+        page[0].classList.remove("dark");
+    }
+    else {
+        page[0].classList.add("dark"); 
+    }
+    
+ // console.log(page[0].classList);
+}
 
 });
