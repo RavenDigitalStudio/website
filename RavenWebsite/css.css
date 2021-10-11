@@ -48,8 +48,11 @@ body {
    position: relative;
    /* z-index: 0;       */
    overflow: hidden;
-  
-          
+  background-image: url(rvnJ.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right; 
+  background-blend-mode: overlay;      
   }
   #page.light {
     /* background: linear-gradient(to bottom, #406e76, #4D7F89); */
@@ -75,11 +78,11 @@ body {
     color: rgb(228, 228, 228);
     text-align: center;
     font-size: 4em;
-    padding-top: 25%;
+    padding-top: 20%;
     font-weight: 100;
     
   
-    background: url(image.png);
+    /* background: url(image.png); */
     opacity: 1;
     top: 0;
     left: 0;
@@ -139,7 +142,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  
+  margin-left: -3vw;
     
 }
 
@@ -150,11 +153,12 @@ display: flex;
 z-index: 1; 
 height: auto;
 
+
 }
 
 .logo img {
-width: 50px;
-height: 50px;
+width: 45px;
+height: 45px;
 margin: auto;
 /* position: absolute; */
 opacity: .7;
@@ -243,7 +247,7 @@ nav a::after {
   
 }
 
-nav a:nth-child(4) {
+nav a:nth-child(3) {
   margin-right: 0;
 }
 
@@ -251,6 +255,7 @@ nav a:nth-child(4) {
   grid-area: menu;
   position: relative;
   display: flex;
+  margin-right: -3vw;
 }
   nav {  
       
@@ -426,7 +431,7 @@ input:checked + .slider:before {
    }
    #m {
     display: inline-flex;
-   margin-left: -10vw;
+   margin-left: -25vw;
     transform: translateY(-20px);
   
 }
@@ -451,7 +456,7 @@ input:checked + .slider:before {
   }
   h1 {
       margin: 0;
-      color: white;
+      color: rgb(245, 245, 245);
       font-size: 5em;
       line-height: 95%;
        margin-left: -5px; 
@@ -461,7 +466,7 @@ input:checked + .slider:before {
   }
   main h2 {
     margin-top: 0.3em;
-    color: white;
+    color: rgb(230, 230, 230);
     font-size: 1.75em;
     min-width: 30ch;
     opacity: 0;
