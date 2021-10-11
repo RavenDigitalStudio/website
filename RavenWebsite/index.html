@@ -22,34 +22,37 @@
         </div>
         <div class="nav">
         <nav>
-        <a href="#sec5">Works</a>
-        <a href="#contact">Contact</a>
-       
-        <a href="#"><img src="menuSml.png" alt=""></a>
+       <div class="tgl2">
+        <img src="darkMode.png" alt="">
+            <!-- Rounded switch -->
+        <label class="switch">
+           
+            <input type="checkbox">
+             <span class="slider round"></span>
+        </label>
+
+       </div>
+        <div class="menu">
+         <a href="#"><div class="ham-menu">☰</div></a>
+         <a href="#sec5">Works</a>
+         <a href="#contact">Contact</a>
+        </div>
+         
         </nav>
     </div>
         <main>
-            <div id="m">
-            <img src="lvtymble5.png" alt="">
-            <div class="title-container">
-            <div class="title">
+         <div id="m">
+          <img src="lvtymble5.png" alt="">
+          <div class="title-container">
+           
             <h1>Smart <br>Web <br>Solutions</h1>
             <h2>website & mobile app design</h2>
-        </div>
-           <div class="tgl">
-            <label class="container">L
-                <input type="radio" checked="checked" name="radio">
-                <span class="checkmark"></span>
-              </label>
-              <label class="container">D
-                <input type="radio" name="radio">
-                <span class="checkmark"></span>
-              </label>
-           </div>
+          </div>
+          
         </main>
     </section>   
 
-    <section id="sec2">
+    <section id="sec2" class="light">
         <div class="right-sec2">
             <p>Whether you need a business website, online store, blog, or a mobile app, we've got you covered.</p>
             <p>We create stunning websites and mobile apps that are both functional and affordable. </p>
@@ -129,19 +132,21 @@
         <div class="contact-container">
             <h2></h2>
             <div class="input-box">
-            <input value="First Name" type="text" id="fname" name="fname">
-            <input value="Last Name" type="text" id="lname" name="lname">
-            <input value="Email" type="text" id="email" name="email">
-            <input value="Phone" type="text" id="phone" name="phone">
-            <select name="pets" id="pet-select">
-                <option value="">Choose a Service<option>
-                <option value="dog">Website Design</option>
-                <option value="cat">Mobile App</option>
-                <option value="hamster">Redisgn Project</option>
-                <option value="parrot">Other</option>       
+            <input placeholder="First Name" type="text" id="fname" name="fname">
+            <input placeholder="Last Name" type="text" id="lname" name="lname">
+            <input placeholder="Email" type="text" id="email" name="email">
+            <input placeholder="Phone" type="text" id="phone" name="phone">
+            <div class="custom-select" style="width:auto;">
+            <select name="service" id="service-select">
+                <option value="choose">Choose a Service</option>
+                <option value="website">Website Design</option>
+                <option value="app">Mobile App</option>
+                <option value="redesign">Redesign Project</option>
+                <option value="other">Other</option>       
             </select>
+            </div>
             <div></div>
-            <input value="Comments" type="text" id="comments" name="comments">
+            <input placeholder="Comments" type="text" id="comments" name="comments">
 
             <button>Submit</button>
         </div>
@@ -156,7 +161,7 @@
     </div>
     <div class="bottom">
         <p>RavenDigitalStudio@gmail.com</p>
-        <p>© 2022 by Raven Digital</p>
+        <p>© 2020-2022 by Raven Digital</p>
     </div>
 
 </footer>

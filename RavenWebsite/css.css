@@ -38,8 +38,8 @@ body {
     display: grid;
     width: 100%;
     
-    grid-template:  "logo menu"  100px 
-                    "main main" ;
+    grid-template:  "... logo menu ..."  100px
+                    "... main main ..." auto;
 
   /* grid-template: 20% / 1fr 1fr; */
 
@@ -48,15 +48,24 @@ body {
    position: relative;
    /* z-index: 0;       */
    overflow: hidden;
+  
           
   }
-  .light {
-    background: linear-gradient(to bottom, #406e76, #4D7F89);
+  #page.light {
+    /* background: linear-gradient(to bottom, #406e76, #4D7F89); */
+   background-color: #406e76;
+    /* background-color: #ac5b50; */
+    transition: background-color 1.5s ease;
   }
-  .dark {
-    background: rgba(36, 36, 36);
+  #page.dark {
+   
+    /* background-color: linear-gradient(to bottom, rgba(36, 36, 36), rgb(50, 50, 50)); */
+    background-color: rgb(42, 42, 42);
+    transition: background-color 1.5s ease;
+    color: rgb(220, 220, 220);
+    
   }
- 
+  
   /* ========================================
           HERO DARK SLIDE ANIMATION 
    ======================================== */
@@ -66,7 +75,7 @@ body {
     color: rgb(228, 228, 228);
     text-align: center;
     font-size: 4em;
-    padding-top: 20%;
+    padding-top: 25%;
     font-weight: 100;
     
   
@@ -77,12 +86,12 @@ body {
     bottom: 0;
     right: 0;
     position: absolute;
-    background-size:30%;
+    background-size:22%;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center; 
     background-color: rgb(28, 28, 28);
-    animation: slideOut ease-in 1200ms 3s forwards;
+    animation: slideOut ease-in 1200ms 2s forwards;
   
     
     z-index: 1;   
@@ -119,6 +128,89 @@ body {
     
 
 
+  /* ========================================
+          LOGO TOP LEFT
+   ======================================== */
+  
+   .logo {
+   
+    color: white;
+    grid-area: logo;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+    
+}
+
+.logo-container {
+/* background-color: #b65e53; */
+display: flex;
+
+z-index: 1; 
+height: auto;
+
+}
+
+.logo img {
+width: 50px;
+height: 50px;
+margin: auto;
+/* position: absolute; */
+opacity: .7;
+/* filter:drop-shadow(8px 8px 5px 5px rgb(84, 84, 8s4)); */
+margin-right: 10px;
+border: 1px solid rgba(199, 199, 199, 0.6);
+border-radius: 50%;
+position: relative;
+z-index: 1;
+}
+
+
+.logo p {
+   position: relative;
+    margin: auto;
+    letter-spacing: 1.5px;
+    position: relative;
+    font-weight: 200;
+    font-size: 22px;
+   padding: 5px; 
+   transform: translateY(-100px);
+   animation: logoSlide 1s ease-out forwards 3.5s;
+}
+.logo p::after{
+  content: "";
+  border-top: 1px solid white;
+  height: 1px;
+  width: 20%;
+  display: block;
+  
+  transition: transform 400ms ease-in;
+  
+  
+}
+
+.logo p span {
+transition: color 400ms ease-in;
+}
+
+.logo p:hover span {
+color: rgb(223, 116, 116);
+}
+
+
+.logo p:hover::after {
+  transform: translateX(100px);
+  
+}
+
+
+@keyframes logoSlide { 
+  100% {
+    transform: translateY(0);
+  }
+  
+}
 /* ========================================
           NAV AT TOP
    ======================================== */
@@ -132,13 +224,11 @@ nav a {
     /* font-weight: 100; */
     margin-right: 30px;
     font-size: 20px;
-    padding-top: 5px;
+  
     position: relative;
     transition: color 300ms ease-in;
 }
-nav a:last-of-type {
-  margin-right: 0;
-}
+
 nav a::after {
   content: "";
   border-top: 1px solid white;
@@ -148,23 +238,28 @@ nav a::after {
  
   transition: transform 300ms ease-in;
   display: inline-block;
-  right: 70%;
+  right: 69%;
   bottom: -2px;
   
 }
+
+nav a:nth-child(4) {
+  margin-right: 0;
+}
+
 .nav{
   grid-area: menu;
-  padding-right: 2%;
+  position: relative;
   display: flex;
 }
   nav {  
-      text-align: right;
+      
       color: white;
       letter-spacing: 1px;
       margin-left: auto;
       margin-top: auto;
       margin-bottom: auto;
-      margin-right: 7em;
+      display: flex;
       
   }
   nav a:hover {
@@ -175,199 +270,102 @@ nav a::after {
  nav a:hover::after {
     transform: translateX(220%);
   }
-  nav img {
-    display: none;
+
+  .menu {
+    margin-top: 2px;
   }
-
-  /* ========================================
-          LOGO TOP LEFT
-   ======================================== */
-  
-  .logo {
-   
-      color: white;
-      grid-area: logo;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    
-      
-  }
-
-.logo-container {
-  /* background-color: #b65e53; */
-  display: flex;
- padding-left: 20%;
- z-index: 1; 
- height: auto;
-  
-}
-
-.logo img {
-width: 50px;
-height: 50px;
-margin: auto;
-/* position: absolute; */
-opacity: .7;
-/* filter:drop-shadow(8px 8px 5px 5px rgb(84, 84, 8s4)); */
-margin-right: 10px;
-
+.ham-menu {
+  font-size: 30px;
+  display: none;
 
 }
 
-  .logo p {
-     
-      margin: auto;
-      letter-spacing: 1.5px;
-      
-      font-weight: 200;
-      font-size: 22px;
-     padding: 5px; 
-  }
-  .logo p::after{
-    content: "";
-    border-top: 1px solid white;
-    height: 1px;
-    width: 20%;
-    display: block;
-    
-    transition: transform 400ms ease-in;
-    
-    
-  }
-
-.logo p span {
-  transition: color 400ms ease-in;
-}
-  
-.logo p:hover span {
-  color: rgb(223, 116, 116);
-}
-
-
-  .logo p:hover::after {
-    transform: translateX(100px);
-    
-  }
-
-  /* ========================================
-          HERO MAIN GRID AREA 
-   ======================================== */
-  main {
-    /* position: relative; */
-     grid-area: main;
-     /* z-index: 1; */
-   
-     margin: auto;
-     
-   }
-  .title-container {
-  display: flex;
-  align-items: center;
-  margin-left: -90px;
-  }
-  h1 {
-      
-      color: white;
-      font-size: 5em;
-      line-height: 95%;
-      /* margin-left: -100px; */
-      margin-bottom: auto;
-      margin-top: -1em;
-    
-  }
-  main h2 {
-    padding-top: 0.3em;
-    color: white;
-    font-size: 1.75em;
-    min-width: 30ch;
-    opacity: 0;
-    /* margin-left: -90px; */
-    margin-top: auto;
-    font-weight: 100;
-    position: relative;
-    animation: slide 1200ms ease-out 4500ms forwards;
-}
-
-/* RADIO BUTTON DARK MODE */
-/* Customize the label (the container) */
-.tgl {
-  
-  position: absolute;
-  right: 350px;
-  top: 37px;
-  display: flex;
-  opacity: 0.8;
-  
-}
-
-.container {
-  display: block;
+/* ============== tgl switch  
+/* The switch - the box around the slider */
+.switch {
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: white;
-  transform: scale(80%);
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  transform: scale(0.5);
 }
 
-/* Hide the browser's default radio button */
-.container input {
-  position: absolute;
+/* Hide default HTML checkbox */
+.switch input {
   opacity: 0;
-  cursor: pointer;
-  height: 0;
   width: 0;
+  height: 0;
 }
 
-/* Create a custom radio button */
-.checkmark {
+/* The slider */
+.slider {
   position: absolute;
+  cursor: pointer;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-  
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+  right: 0;
+  bottom: 0;
   background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #ac5b50;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
+.slider:before {
   position: absolute;
-  display: none;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
+input:checked + .slider {
+  background-color: #da7761;
 }
 
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
+input:focus + .slider {
+  box-shadow: 0 0 1px #da7761;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
   border-radius: 50%;
-  background: white;
 }
+
+.tgl2 {
+  display: flex;
+  align-items: center;
+  /* position: absolute; */
+  /* left: 30%;
+  top: 37px; */
+  opacity: 0.5;
+  transition: opacity 100ms ease-in;
+}
+.tgl2:hover {
+  opacity: .8;
+}
+.tgl2 img {
+  margin-right: -10px;
+  width: 23px;
+  height: 23px;
+  filter: brightness(40);
+}
+
+
+
 
 @keyframes slide {
   0% {
@@ -383,21 +381,97 @@ margin-right: 10px;
 }
 
 
-  #m img {
-      width: 35em;
-      /* max-height: 700px; */
-      transform: rotate(15deg) translateY(-20px);
-      margin-left: auto;
-      min-width: 500px;
-      /* transform: translateY(-30px); */
-    
-      
+ 
+
+  /* .ham-menu {
+    position: relative;
+    border-bottom: 1px solid white;
+    width: 1.75em;
+    height: 5px;
+    top: 8px;
+  }
+  .ham-menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    width: 100%;
+    border-top: 1px solid white;
+  }
+  .ham-menu::after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 0px;
+    width: 100%;
+    border-top: 1px solid white;
   }
 
-  #m {
-      display: inline-flex;
-     margin-left: -30vw;
+  .ham-menu:hover, .ham-menu:hover:before, .ham-menu:hover:after {
+    cursor: pointer;
+
+  } */
+
+
+  /* ========================================
+          HERO MAIN GRID AREA 
+   ======================================== */
+  main {
+    /* position: relative; */
+     grid-area: main;
+     /* z-index: 1; */
+   
+     margin: auto;
+     
+   }
+   #m {
+    display: inline-flex;
+   margin-left: -10vw;
+    transform: translateY(-20px);
+  
+}
+   #m img {
+    width: 35em;
+    /* max-height: 700px; */
+    transform: rotate(15deg);
+    margin-left: auto;
+    min-width: 500px;
+    
+  
+    
+}
+
+  .title-container {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  margin-left: -90px;
+  
   }
+  h1 {
+      margin: 0;
+      color: white;
+      font-size: 5em;
+      line-height: 95%;
+       margin-left: -5px; 
+     margin-top: -1rem;
+     
+    
+  }
+  main h2 {
+    margin-top: 0.3em;
+    color: white;
+    font-size: 1.75em;
+    min-width: 30ch;
+    opacity: 0;
+    /* margin-left: -90px; */
+    
+    font-weight: 100;
+    position: relative;
+    animation: slide 1200ms ease-out 4500ms forwards;
+}
+
 
  
 
@@ -405,16 +479,43 @@ margin-right: 10px;
           SECTION 2 
    ======================================== */
 
+
 #sec2 {
   display: grid;
-  background-color: rgb(242, 242, 242);
+ 
   width: 100%;
   /* height: 1fr; */
   grid-template-columns: 1fr 1fr;   
   padding: 1em;    
+
+  position: sticky;
+  top: 0;
      
 }
-
+/*
+#sec2::before{ 
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-color: inherit;
+  height: 100%;
+  /* clip-path: polygon(50% 80%, 0 100%, 100% 100%); 
+  top: calc(-100% + 1px);
+  /* clip-path: polygon(100% 90%, 0 100%, 100% 100%); 
+  clip-path: polygon(60% 95%, 0% 100%, 100% 100%);
+  
+}
+*/
+#sec2.dark {
+  background-color: rgb(45, 64, 75);
+  color: white;
+  transition: background-color 1.2s ease;
+}
+#sec2.light {
+  background-color: rgb(242, 242, 242);
+  transition: background-color 1.2s ease;
+  
+}
 .laptop {
   
   width: 80%;
@@ -472,6 +573,8 @@ margin-top: 0px;
    ======================================== */
   #sec3 {   
      background-color: rgb(232, 232, 232);
+     z-index: 1;
+     position: relative;
     
   }
 
@@ -530,12 +633,15 @@ margin-top: 0px;
       line-height: 1.6em;
     
   }
-
+/* ========================================
+          SECTION CODERS IMAGE
+   ======================================== */
   .coders {
     justify-content: center;
     position: relative;
     display: flex;
     background-color: rgb(240, 240, 240);
+   
     
   }
 .coders img{
@@ -564,6 +670,7 @@ margin-top: 0px;
     justify-content: center;
     opacity: 1;
     transition: opacity 500ms ease;
+    
     
 }
 
@@ -623,9 +730,11 @@ margin-top: 0px;
    
     /* position: relative; */
     scroll-margin-top: 5em;
-    background-color: rgb(242, 242, 242);
+    background: rgb(242, 242, 242);
     padding-top: 6em;
     padding-bottom: 3em;
+    z-index: 2;
+    position: relative;
 }
 
 .gal {
@@ -705,10 +814,12 @@ height: 100%;
   background-size: cover;
   background-blend-mode: overlay;
   background-attachment: fixed;
-  filter: opacity(95%);
+  /* filter: opacity(95%); */
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  
 }
 .contact > h2 {
   width: 10ch;
@@ -803,6 +914,74 @@ border: 1px solid rgba(92, 92, 92, 0.5);
   
 
 }
+/* ------------------------------------
+   --------Custom Select Box ---------*/ 
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: rgb(250, 250, 250);
+  border-radius: 2px;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: rgb(34, 34, 34) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent rgb(33, 33, 33) transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #181818;
+  padding: 8px 6px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: rgb(245, 245, 245);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
 #comments {
   width: 100%;
   grid-column: span 2;
@@ -873,30 +1052,36 @@ footer div img {
    ======================================== */
 
 @media only screen and (max-width: 850px) {
-  nav a:not(:last-child){
+  nav a:not(:nth-child(1)){
     display: none;
   }
-  nav img {
-    width: 35px;
-    margin-top: 10px;
-    display: inline;
-    left: 50px;
-    transform: translateX(60%);
-    opacity: 0.85;
-    
+
+  .tgl2 {
+    margin-right: 2em;
+  }
+ .ham-menu {
+  
+    display: inline-block; 
+    opacity: 0.75;
+    margin-top: -5px;
+  }
+  nav a {
+    margin-right: 0;
   }
   nav a::after{
-    left: 22px;
+    left: 2px;
     
   }
+  
+
   main img {
     display: none;
   }
   main .title-container {
     margin: 0;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: 7em;
-    margin-bottom: 2em;   
+    margin-bottom: 3em;   
   }
 
   .laptop {
@@ -937,7 +1122,7 @@ footer div img {
     height: 80vw;
   }
   #sec4 p {
-    font-size: clamp(1em,5vw,2em);
+    font-size: clamp(1em,4vw,2em);
   }
   #sec5 > div{
     flex-direction: column;
