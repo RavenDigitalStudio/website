@@ -22,12 +22,12 @@
 
 html {
   scroll-behavior: smooth;
-  
+ 
 }
 body {
     background-color: rgb(255, 255, 255);
     margin: 0px;
-    
+   
    
 }
 
@@ -51,8 +51,12 @@ body {
   background-image: url(rvnJ.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right; 
-  background-blend-mode: overlay;      
+  background-position: right top; 
+  background-blend-mode: overlay;   
+  /* background-attachment: fixed;   */
+  /* position:sticky;
+  top: 0; */
+  
   }
   #page.light {
     /* background: linear-gradient(to bottom, #406e76, #4D7F89); */
@@ -72,7 +76,7 @@ body {
   /* ========================================
           HERO DARK SLIDE ANIMATION 
    ======================================== */
-
+/*
   #page::after {
     content: "Welcome to Raven Digital";
     color: rgb(228, 228, 228);
@@ -82,7 +86,7 @@ body {
     font-weight: 100;
     
   
-    /* background: url(image.png); */
+    background: url(image.png);
     opacity: 1;
     top: 0;
     left: 0;
@@ -129,7 +133,7 @@ body {
     
   }
     
-
+*/
 
   /* ========================================
           LOGO TOP LEFT
@@ -168,6 +172,7 @@ border: 1px solid rgba(199, 199, 199, 0.6);
 border-radius: 50%;
 position: relative;
 z-index: 1;
+transform: rotateY(180deg);
 }
 
 
@@ -438,7 +443,7 @@ input:checked + .slider:before {
    #m img {
     width: 35em;
     /* max-height: 700px; */
-    transform: rotate(15deg);
+    transform: rotate(17deg);
     margin-left: auto;
     min-width: 500px;
     
@@ -490,11 +495,12 @@ input:checked + .slider:before {
  
   width: 100%;
   /* height: 1fr; */
-  grid-template-columns: 1fr 1fr;   
-  padding: 1em;    
-
-  position: sticky;
-  top: 0;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;   
+ 
+position: relative;
+z-index: 1;  
+overflow: hidden;
+min-height: 500px;
      
 }
 /*
@@ -513,28 +519,31 @@ input:checked + .slider:before {
 */
 #sec2.dark {
   background-color: rgb(45, 64, 75);
-  color: white;
+  color: rgba(227, 227, 227, 0.9);
   transition: background-color 1.2s ease;
 }
 #sec2.light {
-  background-color: rgb(242, 242, 242);
+  background-color: rgb(235, 235, 235);
   transition: background-color 1.2s ease;
   
 }
-.laptop {
-  
+.laptop-div {
+  display: flex;
+  margin: auto;
   width: 80%;
+  grid-column: 3/5;
+  }
+.laptop {
+  width: 100%;
+  max-width: 32em;
   transform: rotate(10deg);
-  min-width: 400px;
-  max-width: 700px;
+  /* min-width: 30em;
+  max-width: 60% */
    
 }
-.laptop-div {
-display: flex;
-margin: auto;
 
-}
 .right-sec2 {
+  grid-column: 2/3;
 display: flex;
 flex-direction: column;
   margin: auto;
@@ -577,14 +586,26 @@ margin-top: 0px;
           SECTION 3 ICON CARDS
    ======================================== */
   #sec3 {   
-     background-color: rgb(232, 232, 232);
+     
      z-index: 1;
      position: relative;
+     overflow: hidden;
+    
     
   }
-
+  #sec3.dark {
+    background-color: rgb(69, 86, 97);
+    color: rgba(227, 227, 227, 0.9);
+    transition: background-color 1.2s ease;
+  }
+  #sec3.light {
+    background-color: rgb(223, 223, 223);
+    transition: background-color 1.2s ease;
+    color: rgba(24, 24, 24, 0.9);
+  }
   .cards {
     display: flex;
+    column-gap: 4em;
     /* padding-left: 7em;
     padding-right: 7em; */
     padding-top: 65px;
@@ -592,29 +613,59 @@ margin-top: 0px;
     /* justify-content: center; */
     max-width: 1000px;
     margin: auto;
-    
+   margin-top: 2em;
+   margin-bottom: 2em;
       
   }
   .cards > * {
     font-size: 24px;
     text-align: center;
-    width: 100%;
+    width: 90%;
     font-weight: normal;
+    margin: 1.2em auto;
   }
+  
   
 .card2 img, 
 .card3 img,
 .card1 img {
-  width: 6em;
+  width: 5em;
+  margin-top: 1em;
   
 }
 .card1, .card2, .card3 {
   transition: transform 300ms ease, background-color 300ms ease;
+  /* background-color: rgba(127, 147, 154, 0.728); */
+  box-shadow: 7px 9px 10px 2px rgba(62, 62, 62, 0.2);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.132);
+  position: relative;
+  max-width: 12em;
+  opacity: 0.9;
+  background-color: rgba(103, 103, 103, 0.2);
+ 
+}
+.card1::before, .card2::before, .card3::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to left, rgba(65, 65, 65, 0.1), rgba(131, 141, 145, 0.05));
+  top: -1px;
+  right: -2px;
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(56% 0, 100% 0, 100% 100%, 32% 100%);
+  border: 1px solid rgba(50, 50, 50, 0.35);
+  border-radius: 25px;
+  opacity: 0.8;
+ 
+ 
 }
   #sec3 img {
       /* width: 6em; */
       padding: 10px;
       transition: transform 300ms ease;
+      z-index: 1;
+      position: relative;
   }
   /* make the first icon a bit bigger */
   /* .card1 img {
@@ -628,40 +679,142 @@ margin-top: 0px;
     /* box-shadow: 5px 5px 10px 1px rgb(191, 191, 191); */
   }
   
+  .cards p.title {
+    /* margin-bottom: 0.5em;
+    margin-top: 1.5em; */
+    position: absolute;
+    font-size: 1.7em;
+    top:-70px;
+    right: 60px;
+    min-width: 15ch;
+    font-weight: bold;
+  
+  }
+  .card1 p.title {
+    transform: translateX(40px);
+  }
 
   p.more-info {
       width: 23ch;
       margin: auto;
       padding: 10px;
-      font-weight: 100;
+     font-weight: normal;
       font-size: 21px;
       line-height: 1.6em;
+      padding-bottom: 1.5em;
     
   }
 /* ========================================
           SECTION CODERS IMAGE
    ======================================== */
-  .coders {
-    justify-content: center;
+   .coders2 {
+    background-color: rgb(201, 201, 201);
+    height: 500px;
     position: relative;
+    
+   }
+   .code-langs {
+     margin: auto;
+     width: 90%;
+     height: 50%;
+     
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+    padding-left: 10em;
+    padding-right: 10em;
+   }
+   .html-img, .css-img, .js-img {
+     text-align: center;
+     width: 100%;
+     margin-top: 4em;
+     max-width: 400px;
+     
+   }
+   .js-img img {
+     transform: scale(1.2);
+     padding-top: 5px;
+   }
+   .code-langs img {
+     width: 40%;
+     min-width: 100px;
+    opacity: 0.9;
+    filter: grayscale(50%);
+
+   }
+
+   .code-builders {
+    margin: auto;
+    width: 100%;
+    height: 50%;
+    
     display: flex;
-    background-color: rgb(240, 240, 240);
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 4em;
+    padding-right: 5em;
+    
    
+  }
+ 
+  .wp-img, .webflow-img, .sqrspc-img, .bubble-img {
+    text-align: center;
+    width: 50%;
+    
+    min-width: 20%;
+    transition: transform 1s linear;
     
   }
-.coders img{
-  width: 50em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  filter: grayscale(60%);
- 
-}
+  
+  
+
+  .code-builders img {
+    min-width: 150px;
+    width: 40%;
+   opacity: 0.9;
+   filter: grayscale(50%);
+  }
+  .wp-img img {
+    width: 70%;
+  }
+ .webflow-img img {
+   width: 70%;
+ }
+ .sqrspc-img img {
+   width: 50%;
+ }
+ .bubble-img img{
+   width: 80%;
+ }
+
+
+  .coders2.light::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(131, 131, 131, 0);
+    z-index: 1;
+  }
+  .coders2.dark::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.2);
+    z-index: 1;
+  }
+
 
 
  /* ========================================
           SECTION 4 
    ======================================== */
 
+#sec4 {
+  position: sticky;
+    top: 0;
+}
 #section4 {
     position: relative;
     background-image: url("bgLaptops2.jpg");
@@ -676,7 +829,7 @@ margin-top: 0px;
     opacity: 1;
     transition: opacity 500ms ease;
     
-    
+  
 }
 
 /* dark overlay to bg image */
@@ -690,6 +843,7 @@ margin-top: 0px;
     background-color: rgba(57, 57, 57, 0.8);
     transition: opacity 500ms ease;
     opacity: 1;
+    
    
 }
 
@@ -736,12 +890,36 @@ margin-top: 0px;
     /* position: relative; */
     scroll-margin-top: 5em;
     background: rgb(242, 242, 242);
-    padding-top: 6em;
-    padding-bottom: 3em;
+    padding-top: 7em;
+    padding-bottom: 4em;
     z-index: 2;
     position: relative;
+   
+}
+#sec5.dark {
+  background-color: rgb(69, 86, 97);
+  
+  transition: background-color 1.2s ease;
+}
+#sec5.light {
+  background-color: rgb(232, 232, 232);
+  transition: background-color 1.2s ease;
+  
 }
 
+#sec5.dark .gal-img::before {
+  background-color: rgb(40, 40, 40);
+}
+#sec5.dark img {
+   /* offset-x | offset-y | blur-radius | spread-radius | color */
+   box-shadow: 5px 5px 10px 1px rgb(63, 63, 63);
+
+}
+#sec5.light img {
+   /* offset-x | offset-y | blur-radius | spread-radius | color */
+   box-shadow: 5px 5px 10px 1px rgb(191, 191, 191);
+
+}
 .gal {
   
     display: flex;
@@ -754,8 +932,7 @@ margin-top: 0px;
 .gal img {
     width:28vw;
    
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-   box-shadow: 5px 5px 10px 1px rgb(191, 191, 191);
+   
    margin: 0;
    padding: 0;
    
@@ -818,12 +995,14 @@ height: 100%;
   background-position: center;
   background-size: cover;
   background-blend-mode: overlay;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
   /* filter: opacity(95%); */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 2;
   
 }
 .contact > h2 {
@@ -917,7 +1096,10 @@ border: 1px solid rgba(92, 92, 92, 0.5);
   row-gap: 30px;
   justify-content: center;
   
+}
 
+.input-box input {
+  background-color: rgb(230, 230, 230);
 }
 /* ------------------------------------
    --------Custom Select Box ---------*/ 
@@ -933,7 +1115,7 @@ border: 1px solid rgba(92, 92, 92, 0.5);
 }
 
 .select-selected {
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(230, 230, 230);
   border-radius: 2px;
 }
 
@@ -967,7 +1149,7 @@ border: 1px solid rgba(92, 92, 92, 0.5);
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(225, 225, 225);
   top: 100%;
   left: 0;
   right: 0;
@@ -1015,7 +1197,7 @@ input:focus {
 
 /* footer */
 footer {
-    height: 150px;
+    height: auto;
     background-color: rgb(40, 40, 40);
     /* position: relative; */
     display: flex;
@@ -1094,7 +1276,7 @@ footer div img {
   }
 
   #sec2 {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     text-align: center;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -1104,6 +1286,7 @@ footer div img {
   .right-sec2 {
     align-items: center;
     min-width: 100%;
+    grid-column: 2 / 4;
     
   }
   .right-sec2 p {

@@ -46,6 +46,11 @@ faders.forEach(fader => {
 
 const page = document.querySelectorAll('#page');
 const sec2 = document.querySelectorAll('#sec2');
+const sec3 = document.querySelectorAll('#sec3');
+const secCoders = document.querySelectorAll('.coders2');
+
+const sec5 = document.querySelectorAll('#sec5');
+
 const input2 = document.querySelectorAll('.tgl2 input');
 
 input2.forEach(e => {
@@ -61,6 +66,12 @@ function updateValue(e) {
         page[0].classList.add("light");
         sec2[0].classList.add("light");
         sec2[0].classList.remove("dark"); 
+        sec3[0].classList.add("light");
+        sec3[0].classList.remove("dark");
+        secCoders[0].classList.add("light");
+        secCoders[0].classList.remove("dark");  
+        sec5[0].classList.add("light");
+        sec5[0].classList.remove("dark"); 
 
     }
     else {
@@ -68,6 +79,12 @@ function updateValue(e) {
         page[0].classList.remove("light");
         sec2[0].classList.add("dark");
         sec2[0].classList.remove("light"); 
+        sec3[0].classList.add("dark");
+        sec3[0].classList.remove("light"); 
+        secCoders[0].classList.add("dark");
+        secCoders[0].classList.remove("light");
+        sec5[0].classList.add("dark");
+        sec5[0].classList.remove("light"); 
     }
     
  // console.log(page[0].classList);
