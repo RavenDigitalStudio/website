@@ -910,10 +910,11 @@ margin-top: 0px;
 #sec5.dark .gal-img::before {
   background-color: rgb(40, 40, 40);
 }
+
 #sec5.dark img {
    /* offset-x | offset-y | blur-radius | spread-radius | color */
    box-shadow: 5px 5px 10px 1px rgb(63, 63, 63);
-
+  
 }
 #sec5.light img {
    /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -1281,6 +1282,11 @@ footer div img {
     padding-top: 3em;
     padding-bottom: 3em;
     align-content: center;
+    background-image: url(laptop.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
   }
 
   .right-sec2 {
@@ -1301,8 +1307,10 @@ footer div img {
   .coders {
     text-align: center;
   }
-  .coders img {
-    width: 70%;
+  .code-langs {
+    padding-left: 5em;
+    padding-right: 5em;
+    
     
   }
   
