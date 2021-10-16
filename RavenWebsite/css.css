@@ -747,7 +747,7 @@ margin-top: 0px;
    }
    .code-langs img {
      width: 40%;
-     min-width: 100px;
+     min-width: 90px;
     opacity: 0.9;
     filter: grayscale(50%);
 
@@ -1259,7 +1259,7 @@ footer div img {
   }
  .ham-menu {
   
-    display: inline-block; 
+    /* display: inline-block;  */
     opacity: 0.75;
     margin-top: -5px;
   }
@@ -1314,14 +1314,17 @@ footer div img {
   #sec3 .cards {
     flex-direction: column;
   }
-  .coders {
-    text-align: center;
+  .coders2 {
+    height: 300px;
   }
   .code-langs {
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top:5em;
     
-    
+  }
+  .code-builders {
+    display: none;
   }
   
   #sec4, #section4 {
@@ -1360,7 +1363,9 @@ footer div img {
    width: 100%;
    max-width: 500px;
  }
-
+ .select-selected:after {
+   right: 7px;
+ }
  footer {
 height: 200px;
  }
