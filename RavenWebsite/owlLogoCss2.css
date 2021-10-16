@@ -1,0 +1,177 @@
+
+
+
+body {
+    background-color: rgb(84, 75, 56);
+    margin: 0;
+   display: flex;
+   justify-content: center;
+}
+.container {
+    background-color: rgb(113, 101, 75);
+    width: 500px;
+    height: 530px;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    border-radius: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.605);
+    color: white;
+    
+    
+}
+.box
+{
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1s ease;
+    opacity: 1;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#myBtn {
+background-color: rgb(247, 132, 111);
+width: 50px;
+height: 50px;
+position: absolute;
+left: 50px;
+top: 40px;
+z-index: 5;
+border-radius: 50%;
+}
+
+
+
+h1 {
+    position: absolute;
+    top: 50%;
+    color: rgb(213, 192, 155);
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+img {
+    position: absolute;
+ 
+}
+
+ #img9 {
+    animation: rt .5s ease-out 2s forwards;
+    transform: scale(0);
+   transform-origin: 380px 200px;
+   z-index: -1;
+ }
+    
+
+#img10 {
+    animation: rt .5s ease-out 2.1s forwards;
+    transform: scale(0);
+    transform-origin: 380px 200px;
+    z-index: -1;
+}
+
+#img11 {
+    animation: rt .5s ease-out 2.3s forwards;
+    transform: scale(0);
+   
+    z-index: -2;
+}
+
+#img12 {
+    animation: rt .5s ease-out 2.5s forwards;
+    transform: scale(0);
+    transform-origin: 380px 200px;
+    z-index: -3;
+}
+.foot {
+    animation: rt .5s ease-out 3s forwards;
+    transform: scale(0);
+   
+    z-index: -4;
+
+} 
+
+ #eye {
+    width: 21px;
+    height: 21px;
+    background-color: rgb(205, 138, 79);
+   position: absolute;
+   left:218px;
+    top: 150px; 
+    animation: clps 1s ease-out 3.7s forwards;
+    z-index: 1;
+}
+#eye2 {
+    width: 21px;
+    height: 21px;
+    background-color: rgb(205, 138, 79);
+   position: absolute;
+    left: 310px;
+    top: 150px;
+    animation: clps 1s ease-out 3.7s forwards;
+    z-index: 1;
+} 
+.head1 {
+    z-index: 3;
+    animation: slide 1.3s 5s ease-out forwards;
+    position: absolute;
+    
+    
+    width: 400px;
+
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+    
+}
+@keyframes clps {
+    30% {
+        height: 0;
+    }
+    70% {
+        height: 0;
+    }
+    85% {
+        height: 21px;
+    }
+    100% {
+      
+        height: 0;
+    }
+    
+}
+
+ 
+@keyframes rt {
+   0% {
+    transform: scale(0);
+   } 
+    100% {
+       transform: scale(1);
+       
+       
+    }
+
+}

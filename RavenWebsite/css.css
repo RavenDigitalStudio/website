@@ -51,7 +51,7 @@ body {
   background-image: url(rvnJ.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right top; 
+  background-position: 90% top; 
   background-blend-mode: overlay;   
   /* background-attachment: fixed;   */
   /* position:sticky;
@@ -594,7 +594,10 @@ margin-top: 0px;
      z-index: 1;
      position: relative;
      overflow: hidden;
-    
+    justify-content: center;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 2em;
     
   }
   #sec3.dark {
@@ -609,16 +612,17 @@ margin-top: 0px;
   }
   .cards {
     display: flex;
-    column-gap: 4em;
-    /* padding-left: 7em;
-    padding-right: 7em; */
+    column-gap: 5%;
+   
     padding-top: 65px;
     padding-bottom: 70px;
-    /* justify-content: center; */
+    justify-content: center;
+    align-items: center;
     max-width: 1000px;
     margin: auto;
    margin-top: 2em;
    margin-bottom: 2em;
+   
       
   }
   .cards > * {
@@ -689,18 +693,20 @@ margin-top: 0px;
     position: absolute;
     font-size: 1.7em;
     top:-70px;
-    right: 60px;
+    right: 50px;
     min-width: 15ch;
     font-weight: bold;
+   
   
   }
   .card1 p.title {
-    transform: translateX(40px);
+    transform: translateX(10%);
+  
   }
 
   p.more-info {
       width: 23ch;
-      margin: auto;
+     margin: auto;
       padding: 10px;
      font-weight: normal;
       font-size: 21px;
@@ -732,7 +738,7 @@ margin-top: 0px;
      text-align: center;
      width: 100%;
      margin-top: 4em;
-     max-width: 400px;
+     max-width: 300px;
      
    }
    .js-img img {

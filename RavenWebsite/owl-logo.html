@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link href="owlLogoCss2.css" rel="stylesheet">
+
+<title>Insomnia Logo</title>
+</head>
+<body>
+    <div class="container">
+       <div class="box">
+        <div class="head1">
+         <div class="head" id="eye"></div>
+        <div class="head" id="eye2"></div> 
+        
+        <img src="Owl Logo/Artboard 1@2x-8.png" class="head">
+        <img src="Owl Logo/Artboard 1 copy@2x-8.png" class="head">
+        <img src="Owl Logo/Artboard 1 copy 2@2x-8.png" class="head" id="img1">
+        <img src="Owl Logo/Artboard 1 copy 3@2x-8.png" class="head" id="img2">
+        <img src="Owl Logo/Artboard 1 copy 4@2x-8.png" class="head">
+        <img src="Owl Logo/Artboard 1 copy 5@2x-8.png" class="head">
+        <img src="Owl Logo/Artboard 1 copy 6@2x-8.png" class="head">
+        <img src="Owl Logo/Artboard 1 copy 7@2x-8.png" class="head" id="img7">
+        <img src="Owl Logo/Artboard 1 copy 8@2x-8.png" class="head" id="img8">
+        </div>
+        <img src="Owl Logo/Artboard 1 copy 9@2x-8.png" id="img9">
+        
+        <img src="Owl Logo/Artboard 1 copy 10@2x-8.png" id="img10">
+        <img src="Owl Logo/Artboard 1 copy 11@2x-8.png" id="img11">
+        <img src="Owl Logo/Artboard 1 copy 12@2x-8.png" id="img12">
+        <img src="Owl Logo/Artboard 1 copy 13@2x-8.png" class="foot">
+        <img src="Owl Logo/Artboard 1 copy 14@2x-8.png" class="foot">
+    </div>
+        </div>
+        <a href="#" class="link"><button id="myBtn">replay</button></a>
+
+
+            <script>
+                document.getElementById("myBtn").addEventListener("click", function(e) {
+  
+                  const box = document.getElementsByClassName("box")[0];
+                 const cont = document.getElementsByClassName("container")[0];
+                 box.remove();
+
+  
+                setTimeout(function(){cont.append(box)}, 1000);
+ 
+            });
+
+
+            </script>
+</body>
+</html>
