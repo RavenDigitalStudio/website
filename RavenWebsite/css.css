@@ -745,6 +745,10 @@ margin-top: 0px;
      transform: scale(1.2);
      padding-top: 5px;
    }
+   .js-img {
+    transform: translateY(-2px);
+   
+  }
    .code-langs img {
      width: 40%;
      min-width: 90px;
@@ -1323,6 +1327,7 @@ footer div img {
     padding-top:5em;
     
   }
+ 
   .code-builders {
     display: none;
   }
