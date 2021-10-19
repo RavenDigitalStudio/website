@@ -61,6 +61,8 @@ h1 span {
     background-image: url(bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(75, 75, 75, 0.5);
 }
   .card {
     width: 80%;
