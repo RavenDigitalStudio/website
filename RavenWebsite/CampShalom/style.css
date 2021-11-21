@@ -26,6 +26,7 @@ body {
   align-items: center;
   width: 143px;
   margin-left: 1em;
+  padding-top: 0.5em;
 }
 .logo-container img {
   width: 100%;
@@ -53,7 +54,19 @@ nav ul a {
   font-weight: bold;
   padding: 1em;
 }
-
+nav ul a:hover {
+  position: relative;
+}
+nav ul a:hover::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  background-color: #fff;
+  margin-top: 0.5em;
+  position: absolute;
+  left: 15%;
+}
 .main-section {
   background-color: #023157;
   width: 100%;
@@ -62,6 +75,7 @@ nav ul a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* background-attachment: fixed; */
   position: relative;
   display: flex;
 
@@ -76,11 +90,11 @@ nav ul a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(50, 50, 50, 0.8);
+  background-color: rgba(45, 45, 45, 0.8);
 }
 .main-section h1 {
   font-size: 5.5em;
-  color: #fbe99e;
+  color: #ffffff;
   font-weight: bold;
   margin-bottom: 0;
   font-family: spartan;
@@ -96,28 +110,30 @@ nav ul a {
   font-family: spartan;
 }
 .main-section p {
-  margin-top: 1em;
+  margin-top: 2em;
   font-weight: bold;
 
   z-index: 1;
-  text-align: center;
 }
 .main-p {
   color: #fbe99e;
-  line-height: 1.4em;
+  line-height: 1.7em;
   font-size: 1.3em;
-  margin-bottom: 2em;
+  margin-bottom: 1.8em;
   max-width: 65%;
+  text-align: justify;
 }
 .location-p {
   color: white;
   font-size: 1.4em;
-  line-height: 1.5em;
+  line-height: 2em;
+  text-align: center;
 }
-.rocks {
+.main-section .rocks {
   color: #fbe99e;
   font-size: 2.5em;
   font-family: spartan;
+  margin-top: 2em;
 }
 .sponsor-sec {
   text-align: center;
