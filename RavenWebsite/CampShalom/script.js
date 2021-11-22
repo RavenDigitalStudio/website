@@ -7,7 +7,7 @@ switch (window.location.pathname.split("/")[2]) {
     menu.children[0].children[0].style.color = "#F7ECA8";
     break;
   }
-  case "campDetails.html": {
+  case "campDetails.html" || "campdetails": {
     menu.children[1].children[0].style.color = "#F7ECA8";
     break;
   }
