@@ -7,7 +7,7 @@ switch (window.location.pathname.split("/")[2]) {
     menu.children[0].children[0].style.color = "#F7ECA8";
     break;
   }
-  case "campDetails.html" || "campdetails": {
+  case "campdetails": {
     menu.children[1].children[0].style.color = "#F7ECA8";
     break;
   }
@@ -15,11 +15,11 @@ switch (window.location.pathname.split("/")[2]) {
     menu.children[2].children[0].style.color = "#F7ECA8";
     break;
   }
-  case "counselorApplication.html": {
+  case "counselorapplication": {
     menu.children[3].children[0].style.color = "#F7ECA8";
     break;
   }
-  case "scholarshipApplication.html": {
+  case "scholarshipapplication": {
     menu.children[4].children[0].style.color = "#F7ECA8";
     break;
   }
