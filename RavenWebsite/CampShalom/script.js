@@ -1,8 +1,8 @@
 const menu = document.querySelector(".menu");
 //console.log(menu.children);
-console.log(window.location.pathname.split("/")[1]);
+console.log(window.location.pathname.split("/")[2]);
 
-switch (window.location.pathname.split("/")[1]) {
+switch (window.location.pathname.split("/")[2]) {
   case "about.html": {
     menu.children[0].children[0].style.color = "#F7ECA8";
     break;
