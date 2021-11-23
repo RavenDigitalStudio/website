@@ -1,0 +1,14 @@
+iframe {
+  border-style: none;
+}
+
+.frame-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+
+  height: 2300px;
+}
+
+  
+
